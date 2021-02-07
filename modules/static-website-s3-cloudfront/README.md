@@ -1,8 +1,15 @@
 # static-website-s3-cloudfront
 
-This module uses AWS S3 and CloudFront to create the resources needed for a static website
+This module uses S3 and CloudFront to provision a static website on AWS.
 
-Resources created:
+## Result
+
+The result of this module is that going on XYZ.cloudfront.net, you see your website.
+If you want a custom domain (like example.com) then you need to specify variables `https_certificate_arn` and `aliases`
+
+NOTE: this modules doesn't provision automatically the certificates.
+
+## Resources created
 - a S3 bucket 
 - a policy allowing access to S3 only to CloudFront
 - a CloudFront distribution
